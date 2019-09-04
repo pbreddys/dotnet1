@@ -21,14 +21,9 @@ steps:
   inputs:
     solution: '**/*.sln'
     clean: true
+
 - task: NuGetCommand@2
   inputs:
-    command: 'restore'
-    restoreSolution: '**/*.sln'
-    feedsToUse: 'select'
-
- - task: NuGetCommand@2
-    inputs:
     command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
