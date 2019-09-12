@@ -35,12 +35,6 @@ steps:
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
 
-- task: DownloadBuildArtifacts@0
-  inputs:
-    buildType: 'current'
-    downloadType: 'single'
-    downloadPath: '$(System.ArtifactsDirectory)'
-
 - task: DownloadPipelineArtifact@2
   inputs:
     buildType: 'current'
