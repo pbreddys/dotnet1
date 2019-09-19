@@ -39,3 +39,9 @@ steps:
   inputs:
     buildType: 'current'
     targetPath: '$(Pipeline.Workspace)'
+
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    downloadPath: '$(System.ArtifactsDirectory)'
